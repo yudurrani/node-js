@@ -7,6 +7,9 @@ console.log(color.red.inverse(getNotes))
 
 console.log(color.blue('i am blue'))
 
+console.log('hi')
+
+
 
 
 // const validator = require('validator')
