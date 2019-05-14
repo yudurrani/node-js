@@ -1,19 +1,33 @@
 const color = require('chalk')
 const notes = require('./notes.js')
+const yargs = require('yargs')
 
-const getNotes = notes()
+// customize yargs function
+
+yargs.version('1.1.0')
+
+
+console.log(yargs.argv)
+
+
+//  
 
 
 
-const command=process.argv[2]
 
-if ( command === 'add'){
-    console.log('adding note')
-}
 
- else if (command === 'remove'){
-    console.log('removing note')
-}
+// const getNotes = notes()
+
+
+// const command = console.log(process.argv)
+
+// if ( command === 'add'){
+//     console.log('adding note')
+// }
+
+//  else if (command === 'remove'){
+//     console.log('removing note')
+// }
 
 //console.log(color.red.inverse(getNotes))
 
