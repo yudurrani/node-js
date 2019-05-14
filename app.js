@@ -3,14 +3,23 @@ const notes = require('./notes.js')
 
 const getNotes = notes()
 
-console.log(color.red.inverse(getNotes))
-
-console.log(color.blue('i am blue'))
-
-console.log('hi')
 
 
+const command=process.argv[2]
 
+if ( command === 'add'){
+    console.log('adding note')
+}
+
+ else if (command === 'remove'){
+    console.log('removing note')
+}
+
+//console.log(color.red.inverse(getNotes))
+
+//console.log(color.blue('i am blue'))
+
+//console.log('hi')
 
 // const validator = require('validator')
 
