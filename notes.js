@@ -41,9 +41,37 @@ const loadNotes = function(){
    }
 }
 
+
+
+const removeNote = function(title){
+   console.log(title)
+
+//    const notes = loadNotes()
+//    const removingSaidNote = notes.filter(function(note){
+//       if (note.title === title){
+//          notes.remove({
+
+//             title : title,
+//             body : body,
+      
+//          })
+//          saveNotes(notes)
+//          console.log('The Notes have been removed')
+   
+//       } else { console.log( 'Cannot find the title')
+        
+//       }
+
+// })
+}
+
+
+
+
 module.exports = {
    getNotes : getNotes,
-   addNote : addNote
+   addNote : addNote,
+   removeNote : removeNote
 }
 
 
