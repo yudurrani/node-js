@@ -18,13 +18,19 @@ const tasks = {
     }],
 
 
-        getTasksToDo(){ 
-            const taskToDo = this.tasks.filter((tasks) => {
-                return tasks.completed === false
-            })
-            return taskToDo
+        // getTasksToDo(){ 
+        //     const taskToDo = this.tasks.filter((tasks) => {
+        //         return tasks.completed === false
+        //     })
+        //     return taskToDo
 
-        }
+        // }
         
-}
+
+        getTasksToDo(){ 
+           return this.tasks.filter((tasks) =>tasks.completed === false)
+        }
+    }
+
+    
 console.log(tasks.getTasksToDo())
