@@ -32,5 +32,5 @@ const tasks = {
         }
     }
 
-    
+
 console.log(tasks.getTasksToDo())

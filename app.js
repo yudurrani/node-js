@@ -58,8 +58,15 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'This is a read command',
-    handler(){
-        console.log('its a removing function')
+    builder: {
+        title: {
+            describe: 'Note Title',
+            demandOption: true,
+            type: 'string'
+        },
+    },
+    handler(argv){
+        notes.readNote(argv.title)
     }
 })
 
@@ -69,9 +76,11 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'This will list the items',
+   
     handler(){
-        console.log('its a listing function')
-    }
+        notes.listNotes()
+        
+    },
 })
 
 console.log(yargs.argv)
