@@ -1,21 +1,15 @@
 const fs = require('fs')
 const color = require('chalk')
 
+
 const getNotes=() => {
    return 'Your Notes...'
 }
 
+
 const addNote =(title, body) =>{
    const notes = loadNotes()
    const duplicateNotes = notes.find((note) => note.title === title)
-
-   // const duplicateNotes = notes.filter(function(note){
-   //    return note.title === title
-   // })
-
-   //  console.log(duplicateNotes)
-
-   debugger
 
    if (!duplicateNotes){
 
@@ -28,7 +22,7 @@ const addNote =(title, body) =>{
       console.log(color.green.inverse('New note added !'))
 
    } else { console.log(color.green.inverse('console title taken'))
-  
+   
    }
   
 }
@@ -102,37 +96,3 @@ module.exports = {
    listNotes :listNotes,
    readNote : readNote,
 }
-
-
-
-// const getNotes = function(){
-//    return ' The Notes are as follows:'
-// }
-
-// const addNote = function(title, body){
-//    const notes = loadNotes()
-//    console.log(notes)
-
-// }
-
-// const loadNotes = function(){
-//    try {
-//       const databuffer = fs.readFileSync('notes.json')
-//       const dataJSON = databuffer.toString()
-//       return JSON.parse(dataJSON)
-
-//    } catch(e){
-//       return[]
-
-//    }
-
-  
-
-// }
-
-// module.exports = {
-//    getNotes: getNotes,
-//    addNote: addNote,
-
-// }
-
